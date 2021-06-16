@@ -1,0 +1,90 @@
+org: ismaelnascimentoash
+app: vortx
+service: falemais
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  httpApi:
+    cors: true
+
+functions:
+  create-origindestiny:
+    handler: origindestiny/create-origindestiny.handler
+    events:
+      - httpApi:
+          path: /create-origindestiny
+          method: post
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:PutItem"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-origindestiny"
+  get-all-origindestiny:
+    handler: origindestiny/get-all-origindestiny.handler
+    events:
+      - httpApi:
+          path: /get-all-origindestiny
+          method: get
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:Scan"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-origindestiny"
+  delete-origindestiny:
+    handler: origindestiny/delete-origindestiny.handler
+    events:
+      - httpApi:
+          path: /delete-origindestiny/{id}
+          method: delete
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:DeleteItem"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-origindestiny"
+  create-plan:
+    handler: plan/create-plan.handler
+    events:
+      - httpApi:
+          path: /create-plan
+          method: post
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:PutItem"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-plan"
+  get-all-plan:
+    handler: plan/get-all-plan.handler
+    events:
+      - httpApi:
+          path: /get-all-plan
+          method: get
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:Scan"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-plan"
+  delete-plan:
+    handler: plan/delete-plan.handler
+    events:
+      - httpApi:
+          path: /delete-plan/{id}
+          method: delete
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:DeleteItem"
+        Resource:
+          - "arn:aws:dynamodb:us-east-1:187949475709:table/vortx-plan"
+
+plugins:
+  - serverless-iam-roles-per-function
