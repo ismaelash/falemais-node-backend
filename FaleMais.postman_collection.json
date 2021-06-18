@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "79f028b5-3000-47a4-bae3-dabd763a8c60",
+		"name": "FaleMais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllOriginDestinys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/get-all-origindestiny",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"get-all-origindestiny"
+					]
+				},
+				"description": "Get all origin and destiny"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPlan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/get-all-plan",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"get-all-plan"
+					]
+				},
+				"description": "Get all plans"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOriginDestiny",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"origin\": \"085\",\n    \"value\": \"2.97\",\n    \"id\": \"100\",\n    \"destiny\": \"011\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/create-origindestiny",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"create-origindestiny"
+					]
+				},
+				"description": "Create Origin and Destiny"
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePlan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tax\": 10,\n    \"minuteMax\": 79,\n    \"id\": \"101\",\n    \"name\": \"FaleMais Custom\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/create-plan",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"create-plan"
+					]
+				},
+				"description": "Create Plan"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOriginDestiny",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/delete-origindestiny/ID",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"delete-origindestiny",
+						"ID"
+					]
+				},
+				"description": "Delete Origin and Destiny"
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePlan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/delete-plan/ID",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"delete-plan",
+						"ID"
+					]
+				},
+				"description": "Delete Plan"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePlan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"101\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/create-plan",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"create-plan"
+					]
+				},
+				"description": "Create Plan"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateOriginDestiny",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://9fizt2qd49.execute-api.us-east-1.amazonaws.com/create-origindestiny",
+					"protocol": "https",
+					"host": [
+						"9fizt2qd49",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"create-origindestiny"
+					]
+				},
+				"description": "Create Origin and Destiny"
+			},
+			"response": []
+		}
+	]
+}
